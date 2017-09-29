@@ -1,1 +1,55 @@
-// Specific CSS for your home-page
+// phone
+.site-header h1 {
+  font-family: $date_font;
+  font-size: 55px;
+  color: $red;
+  line-height: 0.27;
+}
+.site-header h2 {
+  font-family: $weds_font;
+  font-size: 55px;
+  line-height: 0.27;
+}
+
+.header-wrapper {
+  width: 300px;
+  justify: center;
+  border-top: 1px solid gray;
+  border-bottom: 1px solid gray;
+  padding: 15px 0 30px;
+  margin: 50px auto;
+  text-align: center;
+}
+
+// tablet
+@media (min-width: 768px) {
+  .site-header h1 {
+    font-size: 100px;
+    line-height: 0.45;
+  }
+  .site-header h2 {
+    font-size: 100px;
+    line-height: 0.45;
+  }
+
+  .header-wrapper {
+    width: 520px;
+    padding: 30px 0 50px;
+    margin: 50px auto;
+  }
+}
+
+// laptop
+@media (min-width: 995px) {
+  .site-header h1 {
+    font-size: 120px;
+    line-height: 0.5;
+  }
+  .site-header h2 {
+    font-size: 120px;
+    line-height: 0.5;
+  }
+  .header-wrapper {
+    width: 650px;
+  }
+}
