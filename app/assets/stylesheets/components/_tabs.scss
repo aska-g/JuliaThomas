@@ -9,7 +9,18 @@
   justify-content: space-around;
   height: 50px;
   margin: 0 auto;
+
+  @media (min-width: 768px) {
+    max-width: 500px;
+    height: 60px;
+  }
+  @media (min-width: 995px) {
+    max-width: 700px;
+    height: 70px;
+  }
 }
+
+
 .tabs a {
   color: black;
 }
@@ -19,37 +30,22 @@
   opacity: 0.8;
 }
 
-// phone
 .tabs h3 {
   font-size: 18px;
   font-weight: normal;
   margin: 0;
+  @media (min-width: 768px) {
+    font-size: 30px;
+  }
+  @media (min-width: 995px) {
+    font-size: 36px;
+  }
 }
+
 .tabs p {
   opacity: 0.5;
   margin-bottom: 0;
 }
-
-// tablet
-@media (min-width: 768px) {
-  .tabs {
-    max-width: 500px;
-  }
-  .tabs h3 {
-    font-size: 30px;
-  }
-}
-
-// laptop
-@media (min-width: 995px) {
-  .tabs {
-    max-width: 700px;
-  }
-  .tabs h3 {
-    font-size: 40px;
-  }
-}
-
 .tab {
   background: none;
   flex: 1 1 auto;
@@ -67,7 +63,6 @@
   font-weight: bold;
 }
 .tab-content {
-  padding-top: 50px;
-
+  padding: 0;
 }
 

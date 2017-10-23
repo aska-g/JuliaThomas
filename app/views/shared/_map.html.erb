@@ -1,0 +1,11 @@
+
+<%= image_tag "https://maps.googleapis.com/maps/api/staticmap?center=#{@ceremony.latitude},#{@ceremony.longitude}&zoom=11&size=300x300
+  &scale=1&maptype=roadmap&markers=icon:https://goo.gl/HtyJtk%7C#{@reception.latitude},#{@reception.longitude}
+  &markers=icon:https://goo.gl/THh2TN%7C#{@ceremony.latitude},#{@ceremony.longitude}&style=#{@map_style}key=#{ENV['GOOGLE_API_SERVER_KEY']}
+" %>
+
+
+<%= image_tag "https://maps.googleapis.com/maps/api/staticmap?center=#{@reception.latitude},#{@reception.longitude}&zoom=13&size=300x300&scale=1&maptype=roadmap
+&markers=icon:https://goo.gl/HtyJtk%7C#{@reception.latitude},#{@reception.longitude}
+  &markers=icon:https://goo.gl/THh2TN%7C#{@ceremony.latitude},#{@ceremony.longitude}&style=#{@map_style}key=#{ENV['GOOGLE_API_SERVER_KEY']}
+" %>

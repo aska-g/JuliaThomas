@@ -1,3 +1,18 @@
+.map {
+  max-width: 650px;
+  display: flex;
+  // justify-content: space-around;
+  margin: 0 auto;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.map img {
+  padding: 0;
+  max-width: 100%;
+  // flex: 0 0 45%;
+}
+
+
 .banner {
   width: 100%;
   margin: 0;

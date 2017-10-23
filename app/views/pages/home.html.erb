@@ -27,11 +27,11 @@
 
 <div class="tabs-wapper">
   <div class="tab-content" id="home">
-      <%= render 'shared/banner'%>
+    <%= render 'shared/banner'%>
   </div>
 
   <div class="tab-content hidden" id="logistics">
-    <h3 class="text-center">work in progress</h3>
+    <%= render 'shared/logistics'%>
 
   </div>
 
@@ -70,5 +70,7 @@
 
 
 <!-- rsvp button -->
-
+<div class="rsvp-button">
+  <%= link_to "R.S.V.P.", rsvp_path %>
+</div>
 

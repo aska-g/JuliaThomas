@@ -7,6 +7,26 @@ Wedding.create(
   couple_story: FFaker::Lorem.paragraphs(3)
 )
 
+Rails.logger.info "Creating venues..."
+
+Venue.create(
+  city: "Kraków",
+  postal_code: "31-221",
+  street_address: "Papiernicza 2",
+  name: "Dworek Białoprądnicki",
+  purpose: "reception",
+  wedding_id: Wedding.pluck(:id).sample
+)
+
+Venue.create(
+  city: "Kraków",
+  postal_code: "31-226",
+  street_address: "Ludwika Pasteura 1",
+  name: "Parafia Najświętszej Maryi Panny Matki Kościoła",
+  purpose: "ceremony",
+  wedding_id: Wedding.pluck(:id).sample
+)
+
 Rails.logger.info "Creating users..."
 
 User.create(

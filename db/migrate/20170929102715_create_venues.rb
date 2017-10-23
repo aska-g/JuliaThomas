@@ -5,7 +5,7 @@ class CreateVenues < ActiveRecord::Migration[5.1]
       t.string :postal_code
       t.string :city
       t.string :name
-      t.string :type
+      t.string :purpose
       t.references :wedding, foreign_key: true
 
       t.timestamps

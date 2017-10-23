@@ -4,52 +4,92 @@
   font-size: 55px;
   color: $red;
   line-height: 0.27;
+  @media (min-width: 768px) {
+    font-size: 100px;
+    line-height: 0.45;
+  }
+  @media (min-width: 995px) {
+    font-size: 120px;
+    line-height: 0.5;
+  }
 }
+
 .site-header h2 {
   font-family: $weds_font;
   font-size: 55px;
   line-height: 0.27;
+  @media (min-width: 768px) {
+    font-size: 100px;
+    line-height: 0.45;
+  }
+  @media (min-width: 995px) {
+    line-height: 0.5;
+    font-size: 120px;
+  }
 }
 
 .header-wrapper {
   width: 300px;
-  justify: center;
   border-top: 1px solid gray;
   border-bottom: 1px solid gray;
   padding: 15px 0 30px;
   margin: 50px auto;
   text-align: center;
-}
-
-// tablet
-@media (min-width: 768px) {
-  .site-header h1 {
-    font-size: 100px;
-    line-height: 0.45;
-  }
-  .site-header h2 {
-    font-size: 100px;
-    line-height: 0.45;
-  }
-
-  .header-wrapper {
+  @media (min-width: 768px) {
     width: 520px;
     padding: 30px 0 50px;
     margin: 50px auto;
   }
-}
-
-// laptop
-@media (min-width: 995px) {
-  .site-header h1 {
-    font-size: 120px;
-    line-height: 0.5;
-  }
-  .site-header h2 {
-    font-size: 120px;
-    line-height: 0.5;
-  }
-  .header-wrapper {
+  @media (min-width: 995px) {
     width: 650px;
   }
 }
+
+.story {
+  font-size: 12px;
+  @media (min-width: 768px) {
+    font-size: 18px;
+  }
+  @media (min-width: 995px) {
+    font-size: 22px;
+  }
+}
+
+.content-wrapper {
+  padding: 40px 10px 0 10px;
+  @media (min-width: 768px) {
+    padding: 40px 30px 10px 30px;
+  }
+  @media (min-width: 995px) {
+    padding: 40px 0;
+  }
+}
+
+.section-header {
+  font-family: $headers_font;
+  font-size: 20px;
+  @media (min-width: 768px) {
+    font-size: 34px;
+  }
+  @media (min-width: 995px) {
+    font-size: 42px;
+  }
+}
+
+
+.section-subheader {
+  font-family: $headers_font;
+  font-size: 14px;
+  @media (min-width: 768px) {
+    font-size: 24px;
+  }
+  @media (min-width: 995px) {
+    font-size: 30px;
+  }
+}
+
+.section-subheader img {
+  display: inline;
+  vertical-align: baseline !important;
+}
+
