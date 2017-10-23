@@ -1,2 +1,76 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<!-- header -->
+<div class="header-wrapper">
+  <div class="site-header">
+    <h1><%= date_display(@wedding.date) %></h1>
+    <h2><%= @bride.first_name %>&nbsp;&&nbsp;<%= @groom.first_name %></h2>
+  </div>
+</div>
+
+
+<!-- menu with tabs -->
+
+<div class="tabs">
+  <a class="tab active" data-target="#home">
+    <h3>Home</h3>
+  </a>
+  <a class="tab" data-target="#ourstory">
+    <h3>Our Story</h3>
+  </a>
+  <a class="tab" data-target="#logistics">
+    <h3>Logistics</h3>
+  </a><a class="tab" data-target="#giftideas">
+    <h3>Gift Ideas</h3>
+  </a>
+
+</div>
+<!-- tabs content -->
+
+<div class="tabs-wapper">
+  <div class="tab-content" id="home">
+    <%= render 'shared/banner'%>
+  </div>
+
+  <div class="tab-content hidden" id="logistics">
+    <%= render 'shared/logistics'%>
+
+  </div>
+
+  <div class="tab-content hidden" id="giftideas">
+    <h3 class="text-center">work in progress</h3>
+
+  </div>
+
+  <div class="tab-content hidden" id="ourstory">
+    <%= render 'shared/ourstory' %>
+  </div>
+</div>
+
+
+<% content_for :after_js do %>
+
+<script>
+
+  $(function(){
+
+    $(".tab").on("click", function(e){
+    // Change active tab
+    $(".tab").removeClass('active');
+    $(this).addClass('active');
+    // Hide all tab-content (use class="hidden")
+    $(".tab-content").addClass('hidden');
+    // Show target tab-content (use class="hidden")
+    $($(this).data('target')).removeClass('hidden');
+  });
+
+});</script>
+
+<% end %>
+
+
+
+
+<!-- rsvp button -->
+<div class="rsvp-button">
+  <%= link_to "R.S.V.P.", rsvp_path %>
+</div>
+

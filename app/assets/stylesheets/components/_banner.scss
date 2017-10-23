@@ -1,0 +1,22 @@
+.banner {
+  width: 100%;
+  margin: 0;
+  margin: 0 auto;
+  @media (min-width: 995px) {
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+
+.banner img {
+  padding: 0;
+  display: block;
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.form {
+  width: 600px;
+  margin: 40px auto;
+  font-family: $weds-font !important
+}
